@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SALAH PHOTOGRAPHY</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#0b0b0b;color:#fff;min-height:100vh}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;
+background:linear-gradient(135deg,#111,#222,#080808)}
+.content{max-width:850px}
+h1{font-size:clamp(42px,9vw,90px);letter-spacing:8px;font-weight:700}
+p{margin-top:18px;color:#ccc;font-size:18px;letter-spacing:3px}
+.line{width:80px;height:2px;background:#fff;margin:28px auto}
+button{border:1px solid #fff;background:transparent;color:#fff;padding:13px 25px;border-radius:30px;cursor:pointer;font-size:15px}
+button:hover{background:#fff;color:#000}
+footer{position:fixed;bottom:18px;width:100%;text-align:center;color:#888;font-size:12px;letter-spacing:2px}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="content">
+    <div style="font-size:14px;letter-spacing:5px;color:#aaa">CREATIVE VISUALS</div>
+    <h1>SALAH<br>PHOTOGRAPHY</h1>
+    <div class="line"></div>
+    <p>CAPTURING MOMENTS • TELLING STORIES</p>
+    <br><br>
+    <button id="musicBtn">▶ PLAY MUSIC</button>
+  </div>
+</section>
+
+<audio id="music" loop preload="auto">
+  <source src="assets/Salahafrin.mp3" type="audio/mpeg">
+</audio>
+
+<footer>© SALAH PHOTOGRAPHY</footer>
+
+<script>
+const music=document.getElementById('music');
+const btn=document.getElementById('musicBtn');
+btn.addEventListener('click',()=>{
+  if(music.paused){
+    music.play();
+    btn.textContent='Ⅱ PAUSE MUSIC';
+  }else{
+    music.pause();
+    btn.textContent='▶ PLAY MUSIC';
+  }
+});
+</script>
+</body>
+</html>
